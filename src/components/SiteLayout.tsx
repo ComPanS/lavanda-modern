@@ -1,29 +1,25 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import { site } from '../content/site'
-
-const navigation = [
-  { to: '/', label: 'Home', end: true },
-  { to: '/about', label: 'About' },
-  { to: '/services', label: 'Services' },
-  { to: '/contact', label: 'Contact' },
-]
 
 export function SiteLayout() {
   return (
     <div className="site-shell">
       <header className="site-header">
-        <NavLink className="brand" to="/">{site.shortName}</NavLink>
-        <nav aria-label="Main navigation">
-          {navigation.map(({ to, label, end }) => (
-            <NavLink key={to} to={to} end={end} className={({ isActive }) => isActive ? 'active' : undefined}>
-              {label}
-            </NavLink>
-          ))}
+        <Link className="brand" to="/">
+          <img src="/media/logo.jpg" alt="" />
+          <span>{site.shortName}</span>
+        </Link>
+        <nav aria-label="Основная навигация">
+          <a href="#services">Услуги</a>
+          <a href="#about">О салоне</a>
+          <a href="#contacts">Контакты</a>
         </nav>
+        <a className="header-phone" href={`tel:${site.contact.phone.replace(/[^+\d]/g, '')}`}>Позвонить</a>
       </header>
       <main><Outlet /></main>
       <footer className="site-footer">
-        <p>{site.name} — independent redesign concept.</p>
+        <p>{site.name} · Тула</p>
+        <a href={site.mapUrl}>Открыть в Яндекс Картах</a>
       </footer>
     </div>
   )
