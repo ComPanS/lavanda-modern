@@ -5,7 +5,7 @@
   "supportingSourceUrl": "https://yandex.ru/maps/org/lavanda/1101284357/",
   "openingClassification": "profile site",
   "projectPath": "/Users/aizat/Documents/Projects/RestoredOldSites/lavanda-modern",
-  "phase": "LOCAL_HANDOFF",
+  "phase": "PUBLISHED",
   "source": {
     "language": "ru",
     "businessName": "Лаванда",
@@ -16,5 +16,5 @@
   "routes": [{"path":"/","stage":1,"status":"implemented"},{"path":"/prices/","stage":2,"status":"deferred"},{"path":"/gallery/","stage":2,"status":"deferred"},{"path":"/reviews/","stage":2,"status":"deferred"}],
   "assets": [{"role":"Business logo","status":"used","path":"public/media/logo.jpg"},{"role":"Primary photo","status":"used","path":"public/media/salon-01.jpg"},{"role":"Additional gallery photos","status":"not used","reason":"not retrievable as verified local assets"}],
   "local": {"buildPassed": true,"typecheckPassed":true,"previewUrl":"http://127.0.0.1:4187/","qa": {"viewports":["320x844","390x844","768x1024","1440x900"],"htmlResponse":true,"horizontalOverflow":"needs browser pass"}},
-  "publication": {"approved": false}
+  "publication": {"approved": true,"repository":"https://github.com/ComPanS/lavanda-modern","liveUrl":"https://compans.github.io/lavanda-modern/","workflowRun":"35333342032"}
 }
