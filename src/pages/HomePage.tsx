@@ -14,7 +14,7 @@ export function HomePage() {
           </div>
         </div>
         <div className="hero-visual">
-          <img src="/media/salon-01.jpg" alt="Интерьер салона Лаванда" />
+          <img src={`${import.meta.env.BASE_URL}media/salon-01.jpg`} alt="Интерьер салона Лаванда" />
           <div className="hero-stamp"><strong>{site.rating}</strong><span>рейтинг<br />в Картах</span></div>
         </div>
       </section>
@@ -26,7 +26,7 @@ export function HomePage() {
         <div className="service-list">{services.map((service, index) => <article className="service-item" key={service.slug}><span className="service-number">0{index + 1}</span><div><h3>{service.title}</h3><p>{service.summary}</p></div>{service.price && <strong className="service-price">{service.price}</strong>}</article>)}</div>
       </section>
       <section className="experience section">
-        <div className="experience-image"><img src="/media/salon-01.jpg" alt="Зона ожидания в салоне" /></div>
+        <div className="experience-image"><img src={`${import.meta.env.BASE_URL}media/salon-01.jpg`} alt="Зона ожидания в салоне" /></div>
         <div className="experience-copy"><p className="eyebrow">Повод заглянуть</p><h2>Ухоженность<br /><em>начинается здесь</em></h2><p>В Лаванде можно закрыть сразу несколько задач: обновить стрижку и цвет, привести в порядок ногти и брови, подготовиться к событию или просто выделить время для себя.</p><a className="text-link" href={site.bookingUrl}>Посмотреть свободное время <span>↗</span></a></div>
       </section>
       <section className="section contacts-section" id="contacts">

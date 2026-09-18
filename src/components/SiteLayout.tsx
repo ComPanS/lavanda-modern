@@ -6,7 +6,7 @@ export function SiteLayout() {
     <div className="site-shell">
       <header className="site-header">
         <Link className="brand" to="/">
-          <img src="/media/logo.jpg" alt="" />
+          <img src={`${import.meta.env.BASE_URL}media/logo.jpg`} alt="" />
           <span>{site.shortName}</span>
         </Link>
         <nav aria-label="Основная навигация">
